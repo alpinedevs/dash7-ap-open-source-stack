@@ -86,6 +86,8 @@ static cmd_handler_t get_cmd_handler_callback(int8_t id)
         console_printf("%d:%d ", i, cmd_handler_registrations[i].id);
     }
     console_print("\r\n");
+    
+    return NULL;
 }
 
 // TODO doc

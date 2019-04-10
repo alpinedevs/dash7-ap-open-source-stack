@@ -5,6 +5,7 @@
 #include "hwuart.h"
 #include "hwgpio.h"
 #include "hwsystem.h"
+#include "timer.h"
 
 
 typedef enum

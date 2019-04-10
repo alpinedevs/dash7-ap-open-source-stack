@@ -227,7 +227,7 @@ __LINK_C timer_tick_t timer_get_counter_value()
 static uint32_t get_next_event()
 {
     //this function should only be called from an atomic context
-    int32_t min_delay;
+    int32_t min_delay = 0;  // This should come from the actual timer struct
     uint32_t next_fire_event = NO_EVENT;
     uint32_t counter = timer_get_counter_value();
 
@@ -251,7 +251,7 @@ static uint32_t get_next_event()
 static void configure_next_event()
 {
     //this function should only be called from an atomic context
-	timer_tick_t next_fire_time;
+	timer_tick_t next_fire_time = 0;    // This should be initialized to a better value here
     timer_tick_t current_time = timer_get_counter_value();
 
     do
